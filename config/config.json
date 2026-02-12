@@ -1,0 +1,51 @@
+{
+  "channels": {
+    "joy_stickers": 1471318785502740501,
+    "monster_hunting": 1471318812610531491,
+    "shop": 1471318830046511229,
+    "bot_commands": 1471319082862383138,
+    "admin": null
+  },
+  "channel_names": {
+    "joy_stickers": "#daily-dose-of-joy",
+    "monster_hunting": "#monster-hunting",
+    "shop": "#shop",
+    "bot_commands": "#bot-commands",
+    "admin": "#admin"
+  },
+  "penalties": {
+    "wrong_channel_xp_loss": 5,
+    "run_from_combat_xp_loss_percent": 0.1,
+    "death_xp_loss_percent": 0.2,
+    "death_coin_loss_percent": 0.1,
+    "trap_cooldown_hours": 24
+  },
+  "rewards": {
+    "daily_coins_per_level": 1,
+    "joy_base_xp": 30,
+    "joy_streak_bonus_xp": 0
+  },
+  "combat": {
+    "base_depth_decay_rate": 0.05,
+    "depth_increases_per_kill": 1,
+    "max_depth": 20,
+    "flee_xp_loss_percent": 0.05
+  },
+  "shop": {
+    "rotation_hours": 24,
+    "items_per_rotation": 8,
+    "always_available": ["health_potion", "joke_book"]
+  },
+  "admin_roles": [
+    "Admin",
+    "Moderator",
+    "Bot Master"
+  ],
+  "admin_user_ids": [],
+  "timezone": "America/New_York",
+  "bot_settings": {
+    "command_prefix": "!",
+    "enable_dms": false,
+    "maintenance_mode": false
+  }
+}

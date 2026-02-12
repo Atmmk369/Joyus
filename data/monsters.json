@@ -1,0 +1,240 @@
+{
+  "rat": {
+    "name": "Rat",
+    "tier": "easy",
+    "hp": 15,
+    "ac_physical": 10,
+    "save_dc": 8,
+    "damage_dice": "1d6",
+    "damage_bonus": 0,
+    "xp_reward": 10,
+    "coin_reward": 2,
+    "depth_min": 0,
+    "depth_max": 3,
+    "loot_table": {
+      "rat_tail": 0.3,
+      "small_potion": 0.1
+    },
+    "image_url": "https://example.com/rat.png",
+    "description": "A mangy rat scurries out from the shadows."
+  },
+  "bat": {
+    "name": "Bat",
+    "tier": "easy",
+    "hp": 12,
+    "ac_physical": 12,
+    "save_dc": 9,
+    "damage_dice": "1d4",
+    "damage_bonus": 1,
+    "xp_reward": 8,
+    "coin_reward": 1,
+    "depth_min": 0,
+    "depth_max": 4,
+    "loot_table": {
+      "bat_wing": 0.4
+    },
+    "image_url": "https://example.com/bat.png",
+    "description": "A bat swoops down from above!"
+  },
+  "giant_spider": {
+    "name": "Giant Spider",
+    "tier": "easy",
+    "hp": 20,
+    "ac_physical": 13,
+    "save_dc": 10,
+    "damage_dice": "1d8",
+    "damage_bonus": 2,
+    "xp_reward": 15,
+    "coin_reward": 3,
+    "depth_min": 1,
+    "depth_max": 5,
+    "loot_table": {
+      "spider_silk": 0.5,
+      "venom_sac": 0.2
+    },
+    "image_url": "https://example.com/spider.png",
+    "description": "A massive spider drops from its web!"
+  },
+  "gremlin": {
+    "name": "Gremlin",
+    "tier": "medium",
+    "hp": 35,
+    "ac_physical": 14,
+    "save_dc": 12,
+    "damage_dice": "2d6",
+    "damage_bonus": 3,
+    "xp_reward": 25,
+    "coin_reward": 8,
+    "depth_min": 3,
+    "depth_max": 8,
+    "loot_table": {
+      "gremlin_tooth": 0.4,
+      "health_potion": 0.15
+    },
+    "image_url": "https://example.com/gremlin.png",
+    "description": "A cackling gremlin leaps out, weapons drawn!"
+  },
+  "ghoul": {
+    "name": "Ghoul",
+    "tier": "medium",
+    "hp": 40,
+    "ac_physical": 13,
+    "save_dc": 13,
+    "damage_dice": "2d8",
+    "damage_bonus": 2,
+    "xp_reward": 30,
+    "coin_reward": 10,
+    "depth_min": 4,
+    "depth_max": 9,
+    "loot_table": {
+      "rotted_flesh": 0.6,
+      "health_potion": 0.2,
+      "rusty_sword": 0.1
+    },
+    "image_url": "https://example.com/ghoul.png",
+    "description": "A ghoul emerges from the darkness, hungry for flesh."
+  },
+  "goon": {
+    "name": "Goon",
+    "tier": "medium",
+    "hp": 45,
+    "ac_physical": 15,
+    "save_dc": 11,
+    "damage_dice": "2d6",
+    "damage_bonus": 4,
+    "xp_reward": 28,
+    "coin_reward": 12,
+    "depth_min": 3,
+    "depth_max": 8,
+    "loot_table": {
+      "goon_club": 0.3,
+      "health_potion": 0.15,
+      "leather_armor": 0.1
+    },
+    "image_url": "https://example.com/goon.png",
+    "description": "A brutish goon blocks your path!"
+  },
+  "wolf": {
+    "name": "Wolf",
+    "tier": "hard",
+    "hp": 55,
+    "ac_physical": 14,
+    "save_dc": 13,
+    "damage_dice": "2d8",
+    "damage_bonus": 4,
+    "xp_reward": 40,
+    "coin_reward": 15,
+    "depth_min": 5,
+    "depth_max": 12,
+    "loot_table": {
+      "wolf_pelt": 0.5,
+      "health_potion": 0.25,
+      "fang_dagger": 0.1
+    },
+    "image_url": "https://example.com/wolf.png",
+    "description": "A fierce wolf growls, baring its fangs."
+  },
+  "bear": {
+    "name": "Bear",
+    "tier": "hard",
+    "hp": 70,
+    "ac_physical": 15,
+    "save_dc": 14,
+    "damage_dice": "3d8",
+    "damage_bonus": 5,
+    "xp_reward": 50,
+    "coin_reward": 20,
+    "depth_min": 6,
+    "depth_max": 13,
+    "loot_table": {
+      "bear_claw": 0.6,
+      "health_potion": 0.3,
+      "bear_armor": 0.08
+    },
+    "image_url": "https://example.com/bear.png",
+    "description": "A massive bear roars and charges!"
+  },
+  "skeleton": {
+    "name": "Skeleton Warrior",
+    "tier": "hard",
+    "hp": 50,
+    "ac_physical": 16,
+    "save_dc": 12,
+    "damage_dice": "2d10",
+    "damage_bonus": 3,
+    "xp_reward": 45,
+    "coin_reward": 18,
+    "depth_min": 6,
+    "depth_max": 14,
+    "loot_table": {
+      "ancient_bone": 0.5,
+      "health_potion": 0.2,
+      "iron_sword": 0.15
+    },
+    "image_url": "https://example.com/skeleton.png",
+    "description": "An undead skeleton rises, sword in hand."
+  },
+  "vampire": {
+    "name": "Vampire",
+    "tier": "legendary",
+    "hp": 100,
+    "ac_physical": 17,
+    "save_dc": 16,
+    "damage_dice": "3d10",
+    "damage_bonus": 6,
+    "xp_reward": 100,
+    "coin_reward": 50,
+    "depth_min": 10,
+    "depth_max": 999,
+    "loot_table": {
+      "vampire_fang": 0.7,
+      "health_potion": 0.5,
+      "vampire_cloak": 0.15,
+      "legendary_sword": 0.05
+    },
+    "image_url": "https://example.com/vampire.png",
+    "description": "A powerful vampire materializes before you, fangs gleaming."
+  },
+  "lich": {
+    "name": "Lich Lord",
+    "tier": "legendary",
+    "hp": 120,
+    "ac_physical": 16,
+    "save_dc": 18,
+    "damage_dice": "4d8",
+    "damage_bonus": 8,
+    "xp_reward": 120,
+    "coin_reward": 60,
+    "depth_min": 12,
+    "depth_max": 999,
+    "loot_table": {
+      "phylactery_shard": 0.4,
+      "necromantic_tome": 0.2,
+      "lich_staff": 0.1,
+      "legendary_robes": 0.08
+    },
+    "image_url": "https://example.com/lich.png",
+    "description": "An ancient lich materializes, radiating dark power."
+  },
+  "gryphon": {
+    "name": "Gryphon",
+    "tier": "legendary",
+    "hp": 110,
+    "ac_physical": 18,
+    "save_dc": 15,
+    "damage_dice": "3d12",
+    "damage_bonus": 7,
+    "xp_reward": 110,
+    "coin_reward": 55,
+    "depth_min": 11,
+    "depth_max": 999,
+    "loot_table": {
+      "gryphon_feather": 0.6,
+      "health_potion": 0.4,
+      "winged_helm": 0.12,
+      "legendary_armor": 0.06
+    },
+    "image_url": "https://example.com/gryphon.png",
+    "description": "A majestic gryphon descends from the sky, screeching!"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "health_potion": {
+    "name": "Health Potion",
+    "type": "consumable",
+    "cost": 25,
+    "effect": "heal",
+    "value": 30,
+    "description": "Restores 30 HP",
+    "shop_rotation": "always",
+    "emoji": "🧪"
+  },
+  "greater_health_potion": {
+    "name": "Greater Health Potion",
+    "type": "consumable",
+    "cost": 75,
+    "effect": "heal",
+    "value": 100,
+    "description": "Restores 100 HP",
+    "shop_rotation": "common",
+    "emoji": "⚗️"
+  },
+  "rusty_sword": {
+    "name": "Rusty Sword",
+    "type": "weapon",
+    "subtype": "melee",
+    "cost": 50,
+    "attack_bonus": 2,
+    "damage_dice": "1d6",
+    "damage_bonus": 1,
+    "description": "A worn but serviceable blade",
+    "shop_rotation": "common",
+    "emoji": "🗡️",
+    "required_level": 1
+  },
+  "iron_sword": {
+    "name": "Iron Sword",
+    "type": "weapon",
+    "subtype": "melee",
+    "cost": 150,
+    "attack_bonus": 4,
+    "damage_dice": "1d8",
+    "damage_bonus": 2,
+    "description": "A solid iron blade",
+    "shop_rotation": "common",
+    "emoji": "⚔️",
+    "required_level": 5
+  },
+  "legendary_sword": {
+    "name": "Legendary Sword",
+    "type": "weapon",
+    "subtype": "melee",
+    "cost": 1000,
+    "attack_bonus": 8,
+    "damage_dice": "2d8",
+    "damage_bonus": 5,
+    "description": "A blade of legendary power",
+    "shop_rotation": "rare",
+    "emoji": "⚔️✨",
+    "required_level": 20
+  },
+  "wooden_bow": {
+    "name": "Wooden Bow",
+    "type": "weapon",
+    "subtype": "ranged",
+    "cost": 60,
+    "attack_bonus": 3,
+    "damage_dice": "1d6",
+    "damage_bonus": 0,
+    "range": 30,
+    "description": "A simple hunting bow",
+    "shop_rotation": "common",
+    "emoji": "🏹",
+    "required_level": 1
+  },
+  "crossbow": {
+    "name": "Crossbow",
+    "type": "weapon",
+    "subtype": "ranged",
+    "cost": 200,
+    "attack_bonus": 5,
+    "damage_dice": "1d10",
+    "damage_bonus": 2,
+    "range": 40,
+    "description": "A powerful crossbow",
+    "shop_rotation": "common",
+    "emoji": "🏹",
+    "required_level": 8
+  },
+  "arcane_focus_basic": {
+    "name": "Basic Arcane Focus",
+    "type": "wizard_item",
+    "cost": 100,
+    "spell_power": 2,
+    "spell_bonus": 1,
+    "required_class": "pit_wizard",
+    "description": "Channels magical energy",
+    "shop_rotation": "common",
+    "emoji": "🔮",
+    "required_level": 3
+  },
+  "arcane_focus_greater": {
+    "name": "Greater Arcane Focus",
+    "type": "wizard_item",
+    "cost": 300,
+    "spell_power": 5,
+    "spell_bonus": 3,
+    "required_class": "pit_wizard",
+    "description": "A powerful magical focus",
+    "shop_rotation": "uncommon",
+    "emoji": "🔮✨",
+    "required_level": 10
+  },
+  "leather_armor": {
+    "name": "Leather Armor",
+    "type": "armor",
+    "cost": 80,
+    "defense_bonus": 2,
+    "hp_bonus": 10,
+    "description": "Light and flexible protection",
+    "shop_rotation": "common",
+    "emoji": "🦺",
+    "required_level": 1
+  },
+  "chainmail": {
+    "name": "Chainmail Armor",
+    "type": "armor",
+    "cost": 250,
+    "defense_bonus": 4,
+    "hp_bonus": 25,
+    "description": "Solid metal protection",
+    "shop_rotation": "common",
+    "emoji": "🛡️",
+    "required_level": 8
+  },
+  "legendary_armor": {
+    "name": "Legendary Armor",
+    "type": "armor",
+    "cost": 1500,
+    "defense_bonus": 8,
+    "hp_bonus": 60,
+    "description": "Armor fit for heroes",
+    "shop_rotation": "rare",
+    "emoji": "🛡️✨",
+    "required_level": 25
+  },
+  "wooden_shield": {
+    "name": "Wooden Shield",
+    "type": "shield",
+    "cost": 40,
+    "block_chance": 0.15,
+    "description": "15% chance to block attacks",
+    "shop_rotation": "common",
+    "emoji": "🛡️",
+    "required_level": 1
+  },
+  "iron_shield": {
+    "name": "Iron Shield",
+    "type": "shield",
+    "cost": 150,
+    "block_chance": 0.25,
+    "description": "25% chance to block attacks",
+    "shop_rotation": "common",
+    "emoji": "🛡️",
+    "required_level": 6
+  },
+  "bear_trap": {
+    "name": "Bear Trap",
+    "type": "trap",
+    "cost": 100,
+    "damage": 20,
+    "description": "Set a trap for another player - deals 20 damage",
+    "shop_rotation": "uncommon",
+    "emoji": "🪤",
+    "required_level": 5
+  },
+  "xp_drain_trap": {
+    "name": "XP Drain Trap",
+    "type": "trap",
+    "cost": 200,
+    "xp_drain": 50,
+    "description": "Set a trap for another player - drains 50 XP",
+    "shop_rotation": "rare",
+    "emoji": "💀",
+    "required_level": 10
+  },
+  "joke_book": {
+    "name": "Joke Book",
+    "type": "special",
+    "cost": 10,
+    "effect": "joke",
+    "description": "The bot tells you a random joke",
+    "shop_rotation": "always",
+    "emoji": "📖😄"
+  },
+  "lucky_coin": {
+    "name": "Lucky Coin",
+    "type": "accessory",
+    "cost": 300,
+    "luck_bonus": 10,
+    "description": "+10% chance for rare monster spawns",
+    "shop_rotation": "rare",
+    "emoji": "🪙✨",
+    "required_level": 10
+  },
+  "monster_bait": {
+    "name": "Monster Bait",
+    "type": "consumable",
+    "cost": 50,
+    "effect": "summon",
+    "description": "Guarantees a monster encounter",
+    "shop_rotation": "common",
+    "emoji": "🥩"
+  },
+  "escape_rope": {
+    "name": "Escape Rope",
+    "type": "consumable",
+    "cost": 75,
+    "effect": "escape",
+    "description": "Flee combat with no XP loss",
+    "shop_rotation": "uncommon",
+    "emoji": "🪢"
+  }
+}

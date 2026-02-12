@@ -1,0 +1,276 @@
+{
+  "peasant": {
+    "name": "Peasant",
+    "display_name": "Peasant",
+    "emoji": "👤",
+    "description": "A humble beginning. Reach level 3 to choose your class!",
+    "hp_formula": {
+      "base": 0,
+      "per_level": 10
+    },
+    "abilities": [],
+    "passive": "none",
+    "unlocked_at_level": 1
+  },
+  "joy_keeper": {
+    "name": "Joy Keeper",
+    "tiers": [
+      {"level": 1, "name": "Joy Keeper", "emoji": "🌟"},
+      {"level": 16, "name": "Joy Guardian", "emoji": "🛡️"},
+      {"level": 36, "name": "Joy Archon", "emoji": "👑"}
+    ],
+    "description": "Masters of consistency. Excel at maintaining streaks and gain bonuses for dedication.",
+    "hp_formula": {
+      "base": 80,
+      "per_level": 8
+    },
+    "passive": {
+      "name": "Streak Blessing",
+      "description": "Gain +3 XP for every 5 days of current streak",
+      "type": "xp_bonus_per_streak"
+    },
+    "abilities": [
+      {
+        "name": "Second Wind",
+        "level_required": 5,
+        "cooldown": "daily",
+        "effect": "heal_percent",
+        "value": 0.5,
+        "description": "Restore 50% HP once per day"
+      },
+      {
+        "name": "Unbreakable",
+        "level_required": 15,
+        "cooldown": "weekly",
+        "effect": "prevent_death",
+        "description": "Survive a lethal blow with 1 HP once per week"
+      }
+    ],
+    "combat_bonuses": {
+      "defense": 2,
+      "hp_regen_per_combat": 5
+    },
+    "unlocked_at_level": 3
+  },
+  "chud_warrior": {
+    "name": "Chud Warrior",
+    "tiers": [
+      {"level": 1, "name": "Chud Warrior", "emoji": "⚔️"},
+      {"level": 16, "name": "Chud Champion", "emoji": "🗡️"},
+      {"level": 36, "name": "Chud Warlord", "emoji": "👹"}
+    ],
+    "description": "Fierce fighters who excel in defense. Tank damage and protect allies.",
+    "hp_formula": {
+      "base": 120,
+      "per_level": 12
+    },
+    "passive": {
+      "name": "Iron Will",
+      "description": "+3 to AC (Armor Class) in combat",
+      "type": "defense_bonus",
+      "value": 3
+    },
+    "abilities": [
+      {
+        "name": "Shield Bash",
+        "level_required": 3,
+        "cooldown": "per_combat",
+        "effect": "damage_and_stun",
+        "damage": "1d8+3",
+        "description": "Deal damage and reduce enemy next attack by 50%"
+      },
+      {
+        "name": "Defensive Stance",
+        "level_required": 10,
+        "cooldown": "per_combat",
+        "effect": "reduce_damage",
+        "value": 0.5,
+        "duration": 2,
+        "description": "Take 50% less damage for 2 rounds"
+      },
+      {
+        "name": "Comeback",
+        "level_required": 20,
+        "cooldown": "daily",
+        "effect": "xp_boost_on_recovery",
+        "value": 25,
+        "description": "If HP below 25%, gain +25 XP on defeating next monster"
+      }
+    ],
+    "combat_bonuses": {
+      "block_chance": 0.2,
+      "damage_reduction": 0.1
+    },
+    "unlocked_at_level": 3
+  },
+  "achievement_hunter": {
+    "name": "Achievement Hunter",
+    "tiers": [
+      {"level": 1, "name": "Achievement Hunter", "emoji": "🏆"},
+      {"level": 16, "name": "Achievement Master", "emoji": "🥇"},
+      {"level": 36, "name": "Achievement Legend", "emoji": "🔱"}
+    ],
+    "description": "Seekers of glory who gain power from completing challenges.",
+    "hp_formula": {
+      "base": 90,
+      "per_level": 9
+    },
+    "passive": {
+      "name": "Glory Seeker",
+      "description": "+5% XP and coins per completed achievement (max 50%)",
+      "type": "achievement_multiplier",
+      "max_bonus": 0.5
+    },
+    "abilities": [
+      {
+        "name": "Treasure Hunter",
+        "level_required": 5,
+        "cooldown": "always_active",
+        "effect": "loot_bonus",
+        "value": 0.25,
+        "description": "+25% chance for monster drops"
+      },
+      {
+        "name": "Milestone Rush",
+        "level_required": 12,
+        "cooldown": "on_achievement",
+        "effect": "bonus_xp",
+        "value": 50,
+        "description": "Gain 50 bonus XP when completing an achievement"
+      }
+    ],
+    "combat_bonuses": {
+      "critical_chance": 0.15,
+      "coin_multiplier": 1.5
+    },
+    "unlocked_at_level": 3
+  },
+  "pit_wizard": {
+    "name": "Pit Wizard",
+    "tiers": [
+      {"level": 1, "name": "Pit Wizard", "emoji": "🧙"},
+      {"level": 16, "name": "Necromancer of the Pit", "emoji": "☠️"},
+      {"level": 36, "name": "Lich Lord", "emoji": "💀"}
+    ],
+    "description": "Dark masters of arcane power. Cast devastating spells in combat.",
+    "hp_formula": {
+      "base": 70,
+      "per_level": 7
+    },
+    "passive": {
+      "name": "Arcane Mastery",
+      "description": "Spell damage increased by 20%",
+      "type": "spell_damage_multiplier",
+      "value": 1.2
+    },
+    "spells": [
+      {
+        "id": "magic_missile",
+        "name": "Magic Missile",
+        "level_required": 3,
+        "damage_dice": "2d6",
+        "damage_bonus": 0,
+        "damage_type": "magic",
+        "cost": 0,
+        "description": "Never misses - always hits"
+      },
+      {
+        "id": "fireball",
+        "name": "Fireball",
+        "level_required": 10,
+        "damage_dice": "4d8",
+        "damage_bonus": 5,
+        "damage_type": "magic",
+        "cost": 10,
+        "description": "Massive fire damage"
+      },
+      {
+        "id": "lightning_bolt",
+        "name": "Lightning Bolt",
+        "level_required": 15,
+        "damage_dice": "6d6",
+        "damage_bonus": 3,
+        "damage_type": "magic",
+        "cost": 15,
+        "description": "Chain lightning that can hit multiple times"
+      },
+      {
+        "id": "death_ray",
+        "name": "Ray of Death",
+        "level_required": 25,
+        "damage_dice": "8d10",
+        "damage_bonus": 10,
+        "damage_type": "necrotic",
+        "cost": 30,
+        "description": "Ultimate dark magic"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Mana Shield",
+        "level_required": 8,
+        "cooldown": "per_combat",
+        "effect": "absorb_damage",
+        "value": 20,
+        "description": "Absorb up to 20 damage"
+      }
+    ],
+    "combat_bonuses": {
+      "magic_penetration": 0.2,
+      "spell_critical_chance": 0.1
+    },
+    "unlocked_at_level": 3
+  },
+  "gladiator_of_the_pit": {
+    "name": "Gladiator of the Pit",
+    "tiers": [
+      {"level": 1, "name": "Gladiator of the Pit", "emoji": "🛡️"},
+      {"level": 16, "name": "Pit Champion", "emoji": "⚔️"},
+      {"level": 36, "name": "Pit Emperor", "emoji": "👑"}
+    ],
+    "description": "Arena warriors who specialize in aggressive combat and defeating enemies quickly.",
+    "hp_formula": {
+      "base": 110,
+      "per_level": 11
+    },
+    "passive": {
+      "name": "Warrior's Fury",
+      "description": "+15% damage on all attacks",
+      "type": "damage_multiplier",
+      "value": 1.15
+    },
+    "abilities": [
+      {
+        "name": "Power Strike",
+        "level_required": 3,
+        "cooldown": "per_combat",
+        "effect": "bonus_damage",
+        "damage": "2d10",
+        "description": "Deal massive damage on next attack"
+      },
+      {
+        "name": "Berserker Rage",
+        "level_required": 12,
+        "cooldown": "daily",
+        "effect": "attack_frenzy",
+        "value": 2,
+        "duration": 3,
+        "description": "Attack twice per round for 3 rounds"
+      },
+      {
+        "name": "Execute",
+        "level_required": 20,
+        "cooldown": "per_combat",
+        "effect": "execute_low_hp",
+        "threshold": 0.25,
+        "description": "Instantly kill monster if below 25% HP"
+      }
+    ],
+    "combat_bonuses": {
+      "critical_chance": 0.2,
+      "critical_damage": 2.0,
+      "first_strike_bonus": 10
+    },
+    "unlocked_at_level": 3
+  }
+}
