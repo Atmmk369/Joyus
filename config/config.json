@@ -36,12 +36,8 @@
     "items_per_rotation": 8,
     "always_available": ["health_potion", "joke_book"]
   },
-  "admin_roles": [
-    "Admin",
-    "Moderator",
-    "Bot Master"
-  ],
-  "admin_user_ids": [],
+  "admin_roles": [],
+  "admin_user_ids": [282118870427238400],
   "timezone": "America/New_York",
   "bot_settings": {
     "command_prefix": "!",
