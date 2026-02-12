@@ -670,6 +670,67 @@ async def list_classes(ctx):
     
     await ctx.send(embed=embed)
 
+@bot.command(name='help')
+async def help_command(ctx):
+    """Show all available commands"""
+    embed = discord.Embed(
+        title="📖 Command List",
+        description="All available bot commands",
+        color=discord.Color.blue()
+    )
+    
+    # Profile & Stats
+    embed.add_field(
+        name="👤 Profile & Stats",
+        value=(
+            "`!profile [@user]` - View your or someone's profile\n"
+            "`!leaderboard [level|xp|streak|coins]` - View rankings\n"
+            "`!classes` - View all available classes\n"
+        ),
+        inline=False
+    )
+    
+    # Progression
+    embed.add_field(
+        name="⚡ Progression",
+        value=(
+            "`!selectclass` - Choose or change your class (Level 3+)\n"
+            "`!claim` - Claim your daily coins\n"
+        ),
+        inline=False
+    )
+    
+    # Information
+    embed.add_field(
+        name="ℹ️ Information",
+        value=(
+            "`!joyhelp` - Detailed help and how the bot works\n"
+            "`!help` - This command list\n"
+        ),
+        inline=False
+    )
+    
+    # Check if user is admin to show admin commands
+    is_admin = False
+    if ctx.guild:
+        user_roles = [role.name for role in ctx.author.roles]
+        is_admin = any(role in CONFIG['admin_roles'] for role in user_roles)
+        if not is_admin:
+            is_admin = ctx.author.id in CONFIG.get('admin_user_ids', [])
+        if not is_admin:
+            is_admin = ctx.author.id == ctx.guild.owner_id
+    
+    if is_admin:
+        embed.add_field(
+            name="🛠️ Admin",
+            value="`!adminhelp` - View admin commands",
+            inline=False
+        )
+    
+    embed.set_footer(text="Use !joyhelp for detailed information about how the bot works")
+    
+    await ctx.send(embed=embed)
+
 @bot.command(name='joyhelp')
 async def joy_help(ctx):
     """Show help information"""
@@ -717,7 +778,7 @@ async def joy_help(ctx):
                     "`!newday` - Force new day (testing)\n"
                     "`!give_xp @user <amount>` - Give XP\n"
                     "`!reset_all` - Wipe database\n"
-                    "`!bot_stats` - View statistics"
+                    "`!stats` - View statistics"
                 ),
                 inline=False
             )

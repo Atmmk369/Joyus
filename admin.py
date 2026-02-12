@@ -334,11 +334,12 @@ class AdminCommands(commands.Cog):
         await ctx.send(embed=embed)
         print(f"📝 Channel {channel_type} set to #{channel.name} by {ctx.author.name}")
     
-    @commands.command(name='bot_stats')
-    async def bot_stats(self, ctx):
+    @commands.command(name='stats')
+    async def stats(self, ctx):
         """
         Show bot statistics
         Admin only - works in any channel
+        Usage: !stats
         """
         if not self.is_admin(ctx):
             await ctx.send("❌ You don't have permission to use this command!")
@@ -489,6 +490,85 @@ class AdminCommands(commands.Cog):
         except Exception as e:
             await ctx.send(f"❌ Failed to force new day: {e}")
             print(f"Error forcing new day: {e}")
+    
+    @commands.command(name='adminhelp')
+    async def admin_help(self, ctx):
+        """
+        Show all admin commands
+        Admin only - works in any channel
+        """
+        if not self.is_admin(ctx):
+            await ctx.send("❌ You don't have permission to use this command!")
+            return
+        
+        embed = discord.Embed(
+            title="🛠️ Admin Command List",
+            description="All available admin commands (admin-only)",
+            color=discord.Color.red()
+        )
+        
+        # Bot Management
+        embed.add_field(
+            name="🔧 Bot Management",
+            value=(
+                "`!stats` - View bot statistics\n"
+                "`!reload_data` - Reload JSON files without restart\n"
+                "`!maintenance [true/false]` - Toggle maintenance mode\n"
+                "`!set_channel <type> #channel` - Configure channel purposes\n"
+            ),
+            inline=False
+        )
+        
+        # User Management
+        embed.add_field(
+            name="👥 User Management",
+            value=(
+                "`!reset_user @user` - Reset a specific user's data\n"
+                "`!give_xp @user <amount>` - Give XP to a user\n"
+                "`!give_coins @user <amount>` - Give coins to a user\n"
+                "`!give_item @user <item_id> [qty]` - Give item to user\n"
+                "`!set_hp @user <amount>` - Set a user's HP\n"
+            ),
+            inline=False
+        )
+        
+        # Testing & Debug
+        embed.add_field(
+            name="🧪 Testing & Debug",
+            value=(
+                "`!newday` - Force new day (reset daily tracking)\n"
+                "`!reset_all` - **DANGER:** Wipe entire database\n"
+            ),
+            inline=False
+        )
+        
+        # Channel Types
+        embed.add_field(
+            name="📍 Channel Types (for !set_channel)",
+            value=(
+                "`joy_stickers` - Daily Joy channel\n"
+                "`monster_hunting` - Combat channel\n"
+                "`shop` - Shop channel\n"
+                "`bot_commands` - General commands\n"
+                "`admin` - Admin commands (optional)\n"
+            ),
+            inline=False
+        )
+        
+        embed.add_field(
+            name="💡 Tips",
+            value=(
+                "• Admin commands work in **any channel**\n"
+                "• Use `!newday` to test daily progression quickly\n"
+                "• Use `!reload_data` after editing JSON files\n"
+                "• Be careful with `!reset_all` - it's permanent!"
+            ),
+            inline=False
+        )
+        
+        embed.set_footer(text="Admin access configured in config.json")
+        
+        await ctx.send(embed=embed)
 
 async def setup(bot, db, config):
     """Add admin cog to bot"""
